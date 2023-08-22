@@ -1,5 +1,5 @@
 <template>
-  <h1>Principal</h1>
+  <h1>Inflação</h1>
 </template>
 
 <script setup></script>
