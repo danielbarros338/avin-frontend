@@ -19,6 +19,9 @@
     "nuxt": "^3.6.5"
   },
   "dependencies": {
-    "@tensorflow/tfjs": "^4.10.0"
+    "@mdi/font": "^7.2.96",
+    "@tensorflow/tfjs": "^4.10.0",
+    "sass": "^1.66.1",
+    "vuetify": "^3.4.0-alpha.0"
   }
 }
