@@ -19,9 +19,17 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
+  pinia: {
+    autoImports: [
+      'defineStore'
+    ]
+  },
   vite: {
     define: {
       "process.env.DEBUG": false,
     },
   },
+  runtimeConfig: {
+    public: process.env
+  }
 });
