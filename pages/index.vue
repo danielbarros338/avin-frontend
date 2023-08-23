@@ -1,11 +1,14 @@
 <template>
-  <h1>Principal</h1>
+  <SharedIndexCardComponent />
 </template>
 
 <script setup>
-import { useStocksStore } from "@/store/index.js";
+import { useStocksStore } from "./../store/index.js";
 
 const $stocksStore = useStocksStore();
 
-onMounted(async () => await $stocksStore.getAllTickers())
+onMounted(async () => {
+  await $stocksStore.getAllTickers();
+  await $stocksStore.setHomeIndicators();
+})
 </script>

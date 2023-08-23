@@ -1,6 +1,8 @@
 export default () => {
   return {
     indexesList: [],
-    stocksList: []
+    stocksList: [],
+    homeIndex: [],
+    homeStock:[]
   }
 }
