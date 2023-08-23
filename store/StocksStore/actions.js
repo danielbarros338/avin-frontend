@@ -25,8 +25,10 @@ export default {
         exists = randomIndexesSelection.find(data => data === selectedIndex);
       } 
 
-      if (!exists) randomIndexesSelection.push(selectedIndex);
-      flag++;
+      if (!exists) {
+        randomIndexesSelection.push(selectedIndex);
+        flag++;
+      }
     }
 
     flag = 0;
@@ -39,8 +41,10 @@ export default {
         exists = randomStocksSelection.find(data => data === selectedStock);
       }
 
-      if (!exists) randomStocksSelection.push(data => data === selectedStock);
-      flag++;
+      if (!exists) {
+        randomStocksSelection.push(selectedStock);
+        flag++;
+      }
     }
 
     for (const index of randomIndexesSelection) {
