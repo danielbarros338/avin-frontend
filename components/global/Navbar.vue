@@ -11,85 +11,99 @@
         class="ml-5"
       >
         <v-btn
-          class="elevation-1 ml-2"
-          color="#8cae61"
-          variant="elevated"
+          class="ml-2"
+          color="#fff"
+          variant="text"
           to="/acoes"
         >
-          <v-icon>mdi-finance</v-icon>
+          <v-icon class="mr-1">mdi-finance</v-icon>
           Ações
         </v-btn>
         <v-btn
-          class="elevation-1 ml-2"
-          color="#8cae61"
-          variant="elevated"
+          class="ml-2"
+          color="#fff"
+          variant="text"
           to="/criptomoedas"
         >
-          <v-icon>mdi-bitcoin</v-icon>
+          <v-icon class="mr-1">mdi-bitcoin</v-icon>
           Criptomoedas
         </v-btn>
         <v-btn
-          class="elevation-1 ml-2"
-          color="#8cae61"
-          variant="elevated"
+          class="ml-2"
+          color="#fff"
+          variant="text"
           to="/inflacao"
         >
-          <v-icon>mdi-chart-line</v-icon>
+          <v-icon class="mr-1">mdi-chart-line</v-icon>
           Inflação
         </v-btn>
         <v-btn
-          class="elevation-1 ml-2"
-          color="#8cae61"
-          variant="elevated"
+          class="ml-2"
+          color="#fff"
+          variant="text"
           to="/selic"
         >
-          <v-icon>mdi-chart-bar</v-icon>
+          <v-icon class="mr-1">mdi-chart-bar</v-icon>
           Selic
         </v-btn>
       </div>
-      <!-- Mobile -->
 
-      <v-btn
-        v-if="isMobile"
-        dense
+      <div
+        v-if="!isMobile"
+        id="search-container"
+        style="width: 30%"
       >
-        <v-icon size="28">mdi-menu</v-icon>
+        <NavbarSearchComponent />
+      </div>
 
-        <v-menu activator="parent">
-          <v-list class="text-white" style="background: #4F5FBF">
-            <v-list-item to="/">
-              <v-list-item-title class="text-right">
-                Home
-                <v-icon>mdi-home</v-icon>
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/acoes">
-              <v-list-item-title class="text-right">
-                Ações
-                <v-icon>mdi-finance</v-icon>
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/criptomoedas">
-              <v-list-item-title class="text-right">
-                Cripto
-                <v-icon>mdi-bitcoin</v-icon>
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/inflacao">
-              <v-list-item-title class="text-right">
-                Inflação
-                <v-icon>mdi-chart-line</v-icon>
-              </v-list-item-title>
-            </v-list-item>
-            <v-list-item to="/selic">
-              <v-list-item-title class="text-right">
-                Selic
-                <v-icon>mdi-chart-bar</v-icon>
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </v-btn>
+      <!-- Mobile -->
+      <div
+        v-if="isMobile"
+        class="d-flex justify-end align-center pl-5" style="width: 90%"
+      >
+        <NavbarSearchComponent class="ml-5" />
+
+        <v-btn
+          dense
+        >
+          <v-icon size="28" class="text-white">mdi-menu</v-icon>
+
+          <v-menu activator="parent">
+            <v-list class="text-white" style="background: #4F5FBF">
+              <v-list-item to="/">
+                <v-list-item-title class="text-right">
+                  Home
+                  <v-icon>mdi-home</v-icon>
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item to="/acoes">
+                <v-list-item-title class="text-right">
+                  Ações
+                  <v-icon>mdi-finance</v-icon>
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item to="/criptomoedas">
+                <v-list-item-title class="text-right">
+                  Cripto
+                  <v-icon>mdi-bitcoin</v-icon>
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item to="/inflacao">
+                <v-list-item-title class="text-right">
+                  Inflação
+                  <v-icon>mdi-chart-line</v-icon>
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item to="/selic">
+                <v-list-item-title class="text-right">
+                  Selic
+                  <v-icon>mdi-chart-bar</v-icon>
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </v-btn>
+      </div>
     </div>
   </v-app-bar>
 </template>
