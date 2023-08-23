@@ -2,4 +2,8 @@
   <h1>Selic</h1>
 </template>
 
-<script setup></script>
+<script setup>
+  useHead({
+    title: "AVIN | Selic"
+  })
+</script>

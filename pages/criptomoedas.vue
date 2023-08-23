@@ -2,4 +2,8 @@
   <h1>Criptomoedas</h1>
 </template>
 
-<script setup></script>
+<script setup>
+  useHead({
+    title: "AVIN | Criptomoedas"
+  })
+</script>
