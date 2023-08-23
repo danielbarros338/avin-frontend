@@ -4,24 +4,24 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "AVIN - Avaliações Financeiras",
-      script: [{
-        src: "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"
-      }]
-    }
+      script: [
+        {
+          src: "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js",
+        },
+      ],
+    },
   },
   css: [
-    'vuetify/lib/styles/main.sass',
-    '@mdi/font/css/materialdesignicons.min.css'
+    "vuetify/lib/styles/main.sass",
+    "@mdi/font/css/materialdesignicons.min.css",
   ],
-  modules: [
-    '@pinia/nuxt'
-  ],
+  modules: ["@pinia/nuxt"],
   build: {
-    transpile: ['vuetify']
+    transpile: ["vuetify"],
   },
   vite: {
     define: {
-      'process.env.DEBUG': false
-    }
-  }
-})
+      "process.env.DEBUG": false,
+    },
+  },
+});

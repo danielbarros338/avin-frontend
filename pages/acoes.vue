@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-  useHead({
-    title: "AVIN | Ações"
-  })
+useHead({
+  title: "AVIN | Ações",
+});
 </script>

@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-  useHead({
-    title: "AVIN | Criptomoedas"
-  })
+useHead({
+  title: "AVIN | Criptomoedas",
+});
 </script>

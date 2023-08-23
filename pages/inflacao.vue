@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-  useHead({
-    title: "AVIN | Inflação"
-  })
+useHead({
+  title: "AVIN | Inflação",
+});
 </script>

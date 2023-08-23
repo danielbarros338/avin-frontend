@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-  useHead({
-    title: "AVIN | Selic"
-  })
+useHead({
+  title: "AVIN | Selic",
+});
 </script>
