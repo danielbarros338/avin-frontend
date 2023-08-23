@@ -34,6 +34,7 @@
     "@pinia/nuxt": "^0.4.11",
     "@tensorflow/tfjs": "^4.10.0",
     "sass": "^1.66.1",
+    "vue3-carousel-nuxt": "^1.1.0",
     "vuetify": "^3.4.0-alpha.0"
   }
 }
