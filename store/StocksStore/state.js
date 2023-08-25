@@ -3,6 +3,6 @@ export default () => {
     indexesList: [],
     stocksList: [],
     homeIndex: [],
-    homeStock:[]
-  }
-}
+    homeStock: [],
+  };
+};

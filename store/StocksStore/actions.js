@@ -2,11 +2,16 @@ export default {
   async getAllTickers() {
     const $nuxt = useNuxtApp();
 
-    const response = await fetch($nuxt.$config.public.URL_API + $nuxt.$config.public.ENDPOINT_LIST_ALL_TICKERS);
+    const response = await fetch(
+      $nuxt.$config.public.URL_API +
+        $nuxt.$config.public.ENDPOINT_LIST_ALL_TICKERS,
+    );
     const allTickers = await response.json();
 
-    this.indexesList = await allTickers.indexes.map(data => data.split("^")[1]);
-    this.stocksList = await allTickers.stocks.map(data => data.split("^")[1]);
+    this.indexesList = await allTickers.indexes.map(
+      (data) => data.split("^")[1],
+    );
+    this.stocksList = await allTickers.stocks.map((data) => data.split("^")[1]);
   },
 
   async setHomeIndicators() {
@@ -22,8 +27,8 @@ export default {
 
       let exists = false;
       if (randomIndexesSelection.length > 0) {
-        exists = randomIndexesSelection.find(data => data === selectedIndex);
-      } 
+        exists = randomIndexesSelection.find((data) => data === selectedIndex);
+      }
 
       if (!exists) {
         randomIndexesSelection.push(selectedIndex);
@@ -38,7 +43,7 @@ export default {
 
       let exists = false;
       if (randomStocksSelection.length > 0) {
-        exists = randomStocksSelection.find(data => data === selectedStock);
+        exists = randomStocksSelection.find((data) => data === selectedStock);
       }
 
       if (!exists) {
@@ -51,22 +56,28 @@ export default {
       const formatedIndex = index;
 
       const response = await fetch(
-        `${$nuxt.$config.public.URL_API + $nuxt.$config.public.ENDPOINT_TICKERS_RESUMEN}?sortBy=name&sortOrder=asc&limit=10&search=${formatedIndex}`
+        `${
+          $nuxt.$config.public.URL_API +
+          $nuxt.$config.public.ENDPOINT_TICKERS_RESUMEN
+        }?sortBy=name&sortOrder=asc&limit=10&search=${formatedIndex}`,
       );
       const indexResumen = await response.json();
 
       this.homeIndex.push(await indexResumen);
     }
-    
+
     for (const index of randomStocksSelection) {
       const formatedStocks = index;
 
       const response = await fetch(
-        `${$nuxt.$config.public.URL_API + $nuxt.$config.public.ENDPOINT_TICKERS_RESUMEN}?sortBy=name&sortOrder=asc&limit=10&search=${formatedStocks}`
+        `${
+          $nuxt.$config.public.URL_API +
+          $nuxt.$config.public.ENDPOINT_TICKERS_RESUMEN
+        }?sortBy=name&sortOrder=asc&limit=10&search=${formatedStocks}`,
       );
       const stockResumen = await response.json();
 
       this.homeStock.push(await stockResumen);
     }
-  }
-}
+  },
+};

@@ -4,7 +4,7 @@
       class="d-flex justify-space-between justify-md-start align-center px-2"
       style="width: 100%"
     >
-      <div id="portal-icon" style="width: 10%" @click="sendHome">
+      <div id="portal-icon" @click="sendHome">
         <img src="/img/avin-sm-logo.png" />
       </div>
 
@@ -29,7 +29,7 @@
       </div>
 
       <div v-if="!isMobile" id="search-container" style="width: 30%">
-        <NavbarSearchComponent />
+        <SharedSearchComponent />
       </div>
 
       <!-- Mobile -->
@@ -38,7 +38,7 @@
         class="d-flex justify-end align-center pl-5"
         style="width: 90%"
       >
-        <NavbarSearchComponent class="ml-5" />
+        <SharedSearchComponent class="ml-5" />
 
         <v-btn dense>
           <v-icon size="28" class="text-white">mdi-menu</v-icon>
