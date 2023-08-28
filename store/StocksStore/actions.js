@@ -63,7 +63,7 @@ export default {
       );
       const indexResumen = await response.json();
 
-      this.homeIndex.push(await indexResumen);
+      this.homeIndex.push(await indexResumen.indexes[0]);
     }
 
     for (const index of randomStocksSelection) {
