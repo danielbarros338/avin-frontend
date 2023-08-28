@@ -1,8 +1,9 @@
 <template>
-  <v-sheet style="height: 100%" class="rounded">
-    <div class="d-flex fill-height justify-center align-center">
-      {{ item.stock }}
-      {{ item.name }}
+  <v-sheet style="height: 100%" color="var(--home-card-bg)" class="rounded pa-2">
+    <div class="d-flex flex-wrap fill-height justify-center align-center">
+      <div style="width: 100%">{{ item.name }}</div>
+      <div style="width: 100%">Body</div>
+      <div style="width: 100%">Código: {{ item.stock.split("^").join("") }}</div>
     </div>
   </v-sheet>
 </template>
@@ -11,7 +12,7 @@
 defineProps({
   item: {
     type: Object,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 </script>
