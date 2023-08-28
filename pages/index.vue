@@ -1,11 +1,11 @@
 <template>
   <div class="pa-2">
-    <v-row class="d-flex">
-      <v-col col="12" sm="4" md="3">
-        <HomeCarouselComponent :items="homeStock" />
+    <v-row class="d-flex flex-wrap">
+      <v-col col="12" md="3">
+        <HomeCarouselComponent :items="homeStock" type="stock" />
       </v-col>
-      <v-col col="12" sm="4" md="3">
-        <HomeCarouselComponent :items="cryptoStock" />
+      <v-col col="12" md="3">
+        <HomeCarouselComponent :items="cryptoStock" type="crypto" />
       </v-col>
     </v-row>
   </div>

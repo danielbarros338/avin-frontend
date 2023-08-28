@@ -12,7 +12,7 @@
       :key="`index-${index}`"
       cover
     >
-      <HomeCarouselSheetComponent :item="items" />
+      <HomeCarouselSheetComponent :item="items" :type="type" />
     </v-carousel-item>
   </v-carousel>
 
@@ -27,5 +27,8 @@ defineProps({
     type: Array,
     required: true,
   },
+  type: {
+    type: String
+  }
 });
 </script>
