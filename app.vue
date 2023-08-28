@@ -10,12 +10,15 @@
 </template>
 
 <script setup>
-import { useStocksStore } from "./store/index.js";
+import { useStocksStore, useCryptoStore } from "./store/index.js";
 
 const $stocksStore = useStocksStore();
+const $cryptoStore = useCryptoStore();
 
 onMounted(async () => {
   await $stocksStore.getAllTickers();
   await $stocksStore.setHomeIndicators();
+  await $cryptoStore.getAllCoins();
+  await $cryptoStore.setHomeIndicators();
 });
 </script>

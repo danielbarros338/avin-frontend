@@ -1,4 +1,4 @@
-import * as stockFunctions from "@/utils/stockFunctions.js";
+import * as arrFunctions from "@/utils/arrFunctions.js";
 
 export default {
   async getAllTickers() {
@@ -16,7 +16,7 @@ export default {
   async setHomeIndicators() {
     const $nuxt = useNuxtApp();
 
-    const randomStocksSelection = stockFunctions.randomItemForEach(5, this.stocksList);
+    const randomStocksSelection = arrFunctions.randomItemForEach(5, this.stocksList);
 
     for (const index of randomStocksSelection) {
       const formatedStocks = index;
