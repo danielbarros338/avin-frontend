@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <NavbarComponent />
-    <v-main class="px-0" style="background: #212121">
+    <v-main class="px-0" style="background: var(--color-black-primary)">
       <v-container fluid>
         <NuxtPage />
       </v-container>

@@ -2,7 +2,7 @@
   <v-carousel
     v-if="items.length > 0"
     cycle
-    height="100"
+    height="120"
     hide-delimiter-background
     hide-delimiters
     :show-arrows="false"

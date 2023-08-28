@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar style="background: #3949ab">
+  <v-app-bar style="background: var(--color-blue-primary)">
     <div
       class="d-flex justify-space-between justify-md-start align-center px-2"
       style="width: 100%"
@@ -44,7 +44,7 @@
           <v-icon size="28" class="text-white">mdi-menu</v-icon>
 
           <v-menu activator="parent">
-            <v-list class="text-white" style="background: #4f5fbf">
+            <v-list class="text-white" style="background: var(--color-bg-mobile-menu)">
               <v-list-item to="/">
                 <v-list-item-title class="text-right">
                   Home

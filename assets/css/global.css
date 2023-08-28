@@ -1,3 +1,7 @@
 :root {
-  --home-card-bg: #545454;
+  --color-blue-primary: #3949ab;
+  --color-black-primary: #212121;
+
+  --color-bg-mobile-menu: #4f5fbf;
+  --color-home-card-bg: #454545;
 }
