@@ -2,7 +2,7 @@
   <div class="pa-2">
     <v-row class="d-flex">
       <v-col col="12" sm="4" md="3">
-        <HomeCarouselComponent :items="homeIndex" />
+        <HomeCarouselComponent :items="homeStock" />
       </v-col>
     </v-row>
   </div>
@@ -13,5 +13,5 @@ import { useStocksStore } from "./../store/index.js";
 
 const $stockStore = useStocksStore();
 
-const homeIndex = computed(() => $stockStore.$state.homeIndex);
+const homeStock = computed(() => $stockStore.$state.homeStock);
 </script>
