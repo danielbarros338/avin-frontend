@@ -7,8 +7,8 @@
       <v-col col="12" md="3">
         <HomeCarouselComponent :items="cryptoStock" type="crypto" />
       </v-col>
-      <v-col col="12" md="3">
-        <HomeInflationComponent />
+      <v-col col="12">
+        <HomeInflationComponent :inflation="inflation" />
       </v-col>
     </v-row>
   </div>

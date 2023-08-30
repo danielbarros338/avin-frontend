@@ -18,14 +18,14 @@
           <v-icon class="mr-1">mdi-bitcoin</v-icon>
           Criptomoedas
         </v-btn>
-        <v-btn class="ml-2" color="#fff" variant="text" to="/inflacao">
+        <!-- <v-btn class="ml-2" color="#fff" variant="text" to="/inflacao">
           <v-icon class="mr-1">mdi-chart-line</v-icon>
           Inflação
         </v-btn>
         <v-btn class="ml-2" color="#fff" variant="text" to="/selic">
           <v-icon class="mr-1">mdi-chart-bar</v-icon>
           Selic
-        </v-btn>
+        </v-btn> -->
       </div>
 
       <div v-if="!isMobile" id="search-container" style="width: 30%">

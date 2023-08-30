@@ -1,3 +1,3 @@
 export default () => ({
-  inflation: null
+  inflation: {}
 })
