@@ -8,9 +8,9 @@
       <v-icon class="mr-1">mdi-chart-line</v-icon>
       <b>Inflação</b>
     </div>
-    <!-- <div style="width: 100%">
+    <div style="width: 100%">
       R$ {{ inflation?.value }}
-    </div> -->
+    </div>
   </v-sheet>
 </template>
 
