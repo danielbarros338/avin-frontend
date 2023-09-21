@@ -5,3 +5,4 @@ This web application is centered around financial analysis, utilizing linear reg
 *The platform is being developed with the Brazilian public as a foundation; however, it will be internationalized upon completion of development.*
 
 Used API: [Brapi](https://brapi.dev/)
+BackEnd: [Linear Regression Back End](https://github.com/danielbarros338/linear-regression-backend)
